@@ -14,7 +14,6 @@ defmodule ShortlinxWeb.Router do
     pipe_through :browser
 
     live "/", LinkLive.New, :new
-    live "/links", LinkLive.Index, :index
     live "/links/:id/edit", LinkLive.Edit, :edit
     live "/links/:id", LinkLive.Show, :show
 
