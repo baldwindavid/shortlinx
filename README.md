@@ -1,4 +1,6 @@
-# Shortlinx
+# ![](shortlinx-logo.png)
+
+In Short: A URL Shortener
 
 To view the application locally:
 
