@@ -9,14 +9,10 @@ defmodule Shortlinx.Application do
     children = [
       # Start the Ecto repository
       Shortlinx.Repo,
-      # Start the Telemetry supervisor
-      ShortlinxWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: Shortlinx.PubSub},
       # Start the Endpoint (http/https)
       ShortlinxWeb.Endpoint
-      # Start a worker by calling: Shortlinx.Worker.start_link(arg)
-      # {Shortlinx.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

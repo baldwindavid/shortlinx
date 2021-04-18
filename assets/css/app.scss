@@ -88,3 +88,33 @@
   display: block;
   margin: -1rem 0 2rem;
 }
+
+.shortlinx-logo {
+  width: 200px;
+}
+
+.shortened-link-description {
+  margin-top: 5px;
+}
+
+.base-url {
+  color: #666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #999999;
+}
+
+input[type="text"].url-input {
+  font-size: 3.2rem;
+  height: 4.8rem;
+}
+
+::placeholder {
+  color: #CCC;
+}
+
+button, .button {
+  background-color: #4ECFA3;
+  border-color: #4ECFA3;
+}
