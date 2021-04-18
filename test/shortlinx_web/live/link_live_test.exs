@@ -77,8 +77,8 @@ defmodule ShortlinxWeb.LinkLiveTest do
 
       assert html =~ "No visits yet"
 
-      LinkMgmt.increment_visit_count(link)
-      LinkMgmt.increment_visit_count(link)
+      LinkMgmt.record_visit(link)
+      LinkMgmt.record_visit(link)
 
       assert has_element?(view, "#visits", "Number of Visits: 2")
     end

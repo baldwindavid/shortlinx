@@ -149,14 +149,14 @@ defmodule Shortlinx.LinkMgmtTest do
       assert_raise Ecto.NoResultsError, fn -> LinkMgmt.get_link!(link.id) end
     end
 
-    test "increment_visit_count/1 increments the visit count by 1" do
+    test "record_visit/1 increments the visit count by 1" do
       link = link_fixture()
 
       link = LinkMgmt.get_link!(link.id)
       assert link.visits_count == 0
       assert is_nil(link.last_visit_at)
 
-      LinkMgmt.increment_visit_count(link)
+      LinkMgmt.record_visit(link)
 
       link = LinkMgmt.get_link!(link.id)
       assert link.visits_count == 1

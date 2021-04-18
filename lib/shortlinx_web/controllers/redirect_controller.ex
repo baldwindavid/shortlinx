@@ -11,7 +11,7 @@ defmodule ShortlinxWeb.RedirectController do
         |> redirect(to: Routes.link_new_path(conn, :new))
 
       link ->
-        LinkMgmt.increment_visit_count(link)
+        LinkMgmt.record_visit(link)
         redirect(conn, external: link.url)
     end
   end

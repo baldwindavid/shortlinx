@@ -70,7 +70,7 @@ defmodule Shortlinx.LinkMgmt do
   Increments the visit count for the given link and sets the last visit to the current
   time. It also broadcasts the visit to subscribers of the link topic.
   """
-  def increment_visit_count(%Link{} = link) do
+  def record_visit(%Link{} = link) do
     {1, _} =
       from(link in Link, where: link.id == ^link.id)
       |> Repo.update_all(inc: [visits_count: 1], set: [last_visit_at: DateTime.utc_now()])
