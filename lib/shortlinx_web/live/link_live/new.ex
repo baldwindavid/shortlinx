@@ -3,6 +3,7 @@ defmodule ShortlinxWeb.LinkLive.New do
 
   alias Shortlinx.LinkMgmt
 
+  @impl true
   def render(assigns) do
     ~L"""
     <h1>Shorten your link</h1>
@@ -14,6 +15,7 @@ defmodule ShortlinxWeb.LinkLive.New do
     """
   end
 
+  @impl true
   def mount(_params, _session, socket) do
     link = LinkMgmt.new_link()
 

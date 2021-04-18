@@ -4,6 +4,7 @@ defmodule ShortlinxWeb.LinkLive.FormComponent do
   alias Shortlinx.LinkMgmt
   alias ShortlinxWeb.Endpoint
 
+  @impl true
   def render(assigns) do
     ~L"""
     <%= f = form_for @changeset, "#",

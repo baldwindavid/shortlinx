@@ -3,6 +3,7 @@ defmodule ShortlinxWeb.LinkLive.Show do
 
   alias Shortlinx.LinkMgmt
 
+  @impl true
   def render(assigns) do
     ~L"""
     <h1>Copy Your Shortlink</h1>
@@ -39,6 +40,7 @@ defmodule ShortlinxWeb.LinkLive.Show do
      |> assign(:link, link)}
   end
 
+  @impl true
   def handle_info({:link_visited, link}, socket) do
     link = LinkMgmt.get_link!(link.id)
     {:noreply, assign(socket, :link, link)}

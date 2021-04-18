@@ -3,6 +3,7 @@ defmodule ShortlinxWeb.LinkLive.Edit do
 
   alias Shortlinx.LinkMgmt
 
+  @impl true
   def render(assigns) do
     ~L"""
     <h1>Edit Link</h1>
@@ -14,6 +15,7 @@ defmodule ShortlinxWeb.LinkLive.Edit do
     """
   end
 
+  @impl true
   def mount(%{"id" => id}, _session, socket) do
     link = LinkMgmt.get_link!(id)
 
